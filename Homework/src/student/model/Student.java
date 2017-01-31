@@ -11,9 +11,9 @@ public class Student {
     private int mark;
 
 
-   public String toString() {
+    public String toString() {
         return String.format("name -  %s,surname - %s,  phone %s, mark - %s",
-                name, surname,phone, mark);
+                name, surname, phone, mark);
     }
 
 
@@ -38,7 +38,7 @@ public class Student {
         return mark;
     }
 
-      public String getSurname() {
+    public String getSurname() {
         return surname;
     }
 }

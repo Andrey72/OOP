@@ -18,7 +18,7 @@ public class TestStudent {
         Student st5 = new Student("2Vane", "Roony", "+3809312345", 79);
         Student st6 = new Student("3Zlatan", "Ibrahimovic", "+3809312345", 50);
         Student st7 = new Student("4Ashley", "Young", "+3809312345", 34);
-        Student st8 = new Student("5David", "De Gea", "+3809312345",23);
+        Student st8 = new Student("5David", "De Gea", "+3809312345", 23);
 
 
         Group group1 = new Group("om-21", 4);

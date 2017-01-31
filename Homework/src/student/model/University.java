@@ -22,17 +22,15 @@ public class University {
         System.out.println(Arrays.toString(groups));
     }
 
-   public Group[] addGroup(Group group){
-       if (countGroup == size){
-           System.out.println("Group - full");
-       }
-
-       else {
-           groups[countGroup] = group;
-       countGroup++;
-       }
-       return groups;
-   }
+    public Group[] addGroup(Group group) {
+        if (countGroup == size) {
+            System.out.println("Group - full");
+        } else {
+            groups[countGroup] = group;
+            countGroup++;
+        }
+        return groups;
+    }
 
 
 }

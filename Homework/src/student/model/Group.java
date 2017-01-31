@@ -57,17 +57,20 @@ public class Group {
         return String.format("Group name - %s", nameGroup);
 
     }
+
     public String getNameGroup() {
         return nameGroup;
     }
-    public void  searchStudent(String name){
+
+    public void searchStudent(String name) {
         System.out.println("student name - " + name + "in group" + nameGroup);
-        for(int i = 0; i < students.length; i++){
-            if(students[i] != null && students[i].getName().equals(name)){
+        for (int i = 0; i < students.length; i++) {
+            if (students[i] != null && students[i].getName().equals(name)) {
                 System.out.println(students[i].toString());
             }
         }
     }
+
     public Student[] sortStudents() {
 
         Student temp;
