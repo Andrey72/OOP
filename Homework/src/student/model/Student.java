@@ -30,28 +30,16 @@ public class Student {
         return name;
     }
 
-    public void setName(String name) {
-        if (name == null || name.isEmpty()) return;
-        this.name = name;
-    }
-
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 
     public int getmark() {
         return mark;
     }
 
-    public void setMark(int mark) {
-        this.mark = mark;
-    }
-
-    public String getSurname() {
+      public String getSurname() {
         return surname;
     }
 }
