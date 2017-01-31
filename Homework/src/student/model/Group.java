@@ -47,14 +47,10 @@ public class Group {
         return students;
     }
 
-
-
     public void showStudents() {
         System.out.println("Group name - " + nameGroup);
         System.out.println(Arrays.toString(students));
     }
-
-
 
     @Override
     public String toString() {
