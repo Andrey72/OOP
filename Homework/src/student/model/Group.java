@@ -47,11 +47,7 @@ public class Group {
         return students;
     }
 
-    /*public void showStudent() {
-        for (student student : students) {
-            System.out.println(student.asString());
-        }
-    }*/
+
 
     public void showStudents() {
         System.out.println("Group name - " + nameGroup);
