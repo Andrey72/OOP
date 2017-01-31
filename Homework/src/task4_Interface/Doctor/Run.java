@@ -6,10 +6,11 @@ package task4_Interface.Doctor;
 public class Run {
     public static void main(String[] args) {
 
-        Surgeon neurosurgeon = new Surgeon("Jeson", 20) ;
-
+        Surgeon neurosurgeon = new Surgeon("Jeson","neurosurgeon", 20) ;
         neurosurgeon.showDoctor();
-
+        System.out.println();
+        Surgeon surgeon = new Surgeon("Sem","surgeon", 15) ;
+        surgeon.showDoctor();
 
     }
 }

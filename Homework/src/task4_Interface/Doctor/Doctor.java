@@ -5,6 +5,6 @@ package task4_Interface.Doctor;
  */
 public interface Doctor {
 
-    void prescribemedications();
+    void showDoctor();
 
 }

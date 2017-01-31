@@ -7,21 +7,19 @@ public class Surgeon implements Doctor{
 
     private String name;
     private int exp;
+    private String profession;
 
-    public Surgeon(String name, int exp) {
+    public Surgeon(String name,String profession, int exp) {
         this.exp = exp;
         this.name = name;
+        this.profession = profession;
 
-    }
-    @Deprecated
-    public void prescribemedications(){
-        System.out.println("Take analgetic");
     }
 
     public void showDoctor(){
-        System.out.printf("My name: %s.I'm neurosurgeon, experience in this field - %d year "  , name , exp );
+        System.out.printf("My name -  %s. I'm -  %s, experience in this field - %d year "  , name ,profession, exp );
     }
-  //  public abstract void getWorkType();
+
 
 
 }

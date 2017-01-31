@@ -5,17 +5,13 @@ package task4_Interface.Doctor;
  */
 public class Neurosurgeon extends Surgeon {
 
-    public Neurosurgeon(String name, int age, int exp) {
-        super(name, exp);
+    public Neurosurgeon(String name, String profession, int exp) {
+
+        super(name, profession ,exp );
     }
 
-    @Deprecated
-    public void getWorkType() {
-        System.out.println("I'm a Neurosurgeon");
+
 
     }
-}
-
-
 
 
