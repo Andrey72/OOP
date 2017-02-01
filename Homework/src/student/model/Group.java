@@ -28,24 +28,19 @@ public class Group {
         return students;
     }
 
-    public Student[] deleteStudent(String name, String surname, String phone, int mark) {
-        for (int i = 0; i < students.length; i++) {
-            if (students[i].getName().equals(name) && students[i].getSurname().equals(surname)
-                    && students[i].getPhone().equals(phone) && students[i].getmark() == mark) {
-                students[i] = null;
-                countStudent--;
-
-            }
+    public void deleteStudent(int countStudent) {
+        if (countStudent < 0 ||  students.length - 1 < countStudent) {
+            System.out.println("Students do not exist");
         }
-        for (int i = 0; i < students.length - 1; i++) {
-            if (students[i] == null) {
-                students[i] = students[i + 1];
-                students[i + 1] = null;
+        else {
+            Student[] temp = new Student[students.length - 1];
+            System.arraycopy(students, countStudent + 1, temp, 0, temp.length - countStudent);
+            System.arraycopy(students, 0, temp, temp.length - countStudent, countStudent);
+            students = temp;
 
-            }
         }
-        return students;
     }
+
 
     public void showStudents() {
         System.out.println("Group name - " + nameGroup);

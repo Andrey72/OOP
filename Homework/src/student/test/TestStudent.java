@@ -15,16 +15,16 @@ public class TestStudent {
         Student st2 = new Student("Zlatan", "Ibrahimovic", "+3809312345", 90);
         Student st3 = new Student("Ashley", "Young", "+3809312345", 74);
         Student st4 = new Student("David", "De Gea", "+3809312345", 95);
-        Student st5 = new Student("2Vane", "Roony", "+3809312345", 79);
-        Student st6 = new Student("3Zlatan", "Ibrahimovic", "+3809312345", 50);
-        Student st7 = new Student("4Ashley", "Young", "+3809312345", 34);
-        Student st8 = new Student("5David", "De Gea", "+3809312345", 23);
+        Student st5 = new Student("Harry", "Potter", "+3809312345", 79);
+        Student st6 = new Student("Hermiona", "Ibrahimovic", "+3809312345", 50);
+        Student st7 = new Student("Ron", "Vizli", "+3809312345", 34);
+        Student st8 = new Student("Frodo", "Beginz", "+3809312345", 23);
 
 
         Group group1 = new Group("om-21", 4);
-        Group group2 = new Group("om-22", 5);
+        Group group2 = new Group("om-22", 4);
 
-        group1.addStudent(st1);
+      group1.addStudent(st1);
         System.out.println();
         group1.addStudent(st2);
         group1.addStudent(st3);
@@ -41,7 +41,8 @@ public class TestStudent {
 
         System.out.println();
 
-        group1.deleteStudent("Ashley", " Young", "+3809312345", 74);
+        System.out.println("Delete student:");
+        group1.deleteStudent(9);
         group1.showStudents();
 
         System.out.println();
