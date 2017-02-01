@@ -1,8 +1,4 @@
-package student.test;
-
-import student.model.Group;
-import student.model.Student;
-import student.model.University;
+package student.model;
 
 /**
  * Created by Sherlock on 18.12.2016.
