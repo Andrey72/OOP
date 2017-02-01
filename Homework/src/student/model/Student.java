@@ -29,21 +29,12 @@ public class Student {
         return name;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-
     public int getmark() {
         return mark;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
     @Override
-    public boolean equals(Object student){
+    public boolean equals(Object student) {
         if (student == null || !(student instanceof Student)) return false;
         Student temp = (Student) student;
         if (this == student) return true;

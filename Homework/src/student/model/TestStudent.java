@@ -22,7 +22,7 @@ public class TestStudent {
         Group group2 = new Group("om-22", 4);
         System.out.println();
 
-       // Student[] st46 = group1.addStudent(st1.equals());
+
         group1.addStudent(st2);
         group1.addStudent(st3);
         group1.addStudent(st4);
