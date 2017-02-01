@@ -1,6 +1,7 @@
 package student.model;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * Created by Sherlock on 19.12.2016.
@@ -29,10 +30,9 @@ public class Group {
     }
 
     public void deleteStudent(int countStudent) {
-        if (countStudent < 0 ||  students.length - 1 < countStudent) {
+        if (countStudent < 0 || students.length - 1 < countStudent) {
             System.out.println("Students do not exist");
-        }
-        else {
+        } else {
             Student[] temp = new Student[students.length - 1];
             System.arraycopy(students, countStudent + 1, temp, 0, temp.length - countStudent);
             System.arraycopy(students, 0, temp, temp.length - countStudent, countStudent);
@@ -66,7 +66,8 @@ public class Group {
         }
     }
 
-    public Student[] sortStudents() {
+    // Sort with copareTo()
+   public Student[] sortStudents() {
 
         Student temp;
         for (int i = students.length - 1; i > 0; i--)
@@ -78,5 +79,33 @@ public class Group {
                 }
         return students;
     }
+
+    public void sortComparator(Comparator comparator) {
+        for (int i = students.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (students[j + 1] != null && comparator.compare(students[j], students[j+1]) > 0){
+                    Student temp = students[j+1];
+                    students[j + 1] = students[j];
+                    students[j] = temp;
+                }
+            }
+        }
+
+    }
+
+    @Override
+    public boolean equals(Object group) {
+        if (group == null || !(group instanceof Group)) return false;
+        Group temp = (Group) group;
+        if (this == group) return true;
+        if (!this.nameGroup.equals(temp.nameGroup)) return false;
+        for (int i = 0; i < size; i++) {
+            if (!this.students[i].equals(temp.students[i])) return false;
+            if (this.size != temp.size) return false;
+        }
+
+        return true;
+    }
+
 
 }

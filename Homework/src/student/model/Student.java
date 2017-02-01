@@ -41,6 +41,20 @@ public class Student {
     public String getSurname() {
         return surname;
     }
+
+    @Override
+    public boolean equals(Object student){
+        if (student == null || !(student instanceof Student)) return false;
+        Student temp = (Student) student;
+        if (this == student) return true;
+        if (!this.name.equals(temp.name)) return false;
+        if (!this.surname.equals(temp.surname)) return false;
+        if (this.phone != temp.phone) return false;
+        if (this.mark != temp.mark) return false;
+        return true;
+    }
+
+
 }
 
 

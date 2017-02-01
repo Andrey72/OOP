@@ -15,16 +15,18 @@ public class TestStudent {
         Student st6 = new Student("Hermiona", "Ibrahimovic", "+3809312345", 50);
         Student st7 = new Student("Ron", "Vizli", "+3809312345", 34);
         Student st8 = new Student("Frodo", "Beginz", "+3809312345", 23);
+        Student st9 = new Student("Frodo", "Beginz", "+3809312345", 23);
 
 
-        Group group1 = new Group("om-21", 4);
+        Group group1 = new Group("om-21", 6);
         Group group2 = new Group("om-22", 4);
-
-      group1.addStudent(st1);
         System.out.println();
+
+       // Student[] st46 = group1.addStudent(st1.equals());
         group1.addStudent(st2);
         group1.addStudent(st3);
         group1.addStudent(st4);
+
         group1.showStudents();
 
         System.out.println();
@@ -32,7 +34,8 @@ public class TestStudent {
         group2.addStudent(st5);
         group2.addStudent(st6);
         group2.addStudent(st7);
-        group2.addStudent(st8);
+        group2.addStudent(st5);
+
         group2.showStudents();
 
         System.out.println();
@@ -61,7 +64,19 @@ public class TestStudent {
         group2.sortStudents();
         group2.showStudents();
 
+        System.out.println("--------------------------");
+        group1.sortComparator(new ComparatorByMark());
+        System.out.println("Sorted by Mark:");
+        group1.showStudents();
+
+        System.out.println("--------------------------");
+        group2.sortComparator(new ComparatorByName());
+        System.out.println("Sorted by Name:");
+        group2.showStudents();
+
+
     }
+
 }
 
 
