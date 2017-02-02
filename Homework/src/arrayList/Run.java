@@ -5,7 +5,8 @@ package arrayList;
  */
 public class Run {
     public static void main(String[] args) {
-        ArrayList car = new ArrayList(1);
+        ArrayList car = new ArrayList();
+
         System.out.println("add index:");
         car.add("Honda");
         car.add("Mazda");
@@ -13,13 +14,12 @@ public class Run {
         car.add("BMW");
 
         car.showList();
-        System.out.println("Add index and object: ");
         car.add(5, "Audi");
         car.showList();
 
         System.out.println(car.get(5));
         System.out.println("Remove index:");
-        car.remove(0);
+        car.remove(2);
         car.showList();
         System.out.println("Set mark car:");
         car.set(5, "Lada");
@@ -27,9 +27,9 @@ public class Run {
 
         System.out.println(car.contains("Seat"));
         car.showList();
+
+        System.out.println(car.size());
         car.delet();
         car.showList();
-
-
     }
 }
