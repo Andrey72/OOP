@@ -9,7 +9,7 @@ public class ArrayList {
 
     private int size = 0;
     private Object[] objects;
-    private static final int DEFAULT_CAPACITY = 2;
+    private static final int DEFAULT_CAPACITY = 10;
 
 
     public ArrayList(){
