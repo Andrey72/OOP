@@ -7,10 +7,10 @@ public class TestStudent {
     public static void main(String[] args) {
 
 
-        Student st1 = new Student("Vane", "  Roony ", "+3809312345", 80);
+        Student st1 = new Student("Vane", "  Roony ", "+3809312345", 80) ;
         Student st2 = new Student("Zlatan", "Ibrahimovic", "+3809312345", 90);
-        Student st3 = new Student("Ashley", "Young", "+3809312345", 74);
-        Student st4 = new Student("David", "De Gea", "+3809312345", 95);
+        Student st3 = new Student("David", "De G", "+3809312345", 95);
+        Student st4 = new Student("David", "De Ge", "+3809312345", 95);
         Student st5 = new Student("Harry", "Potter", "+3809312345", 79);
         Student st6 = new Student("Hermiona", "Ibrahimovic", "+3809312345", 50);
         Student st7 = new Student("Ron", "Vizli", "+3809312345", 34);
@@ -26,7 +26,7 @@ public class TestStudent {
         group1.addStudent(st2);
         group1.addStudent(st3);
         group1.addStudent(st4);
-
+        group1.addStudent(st9);
         group1.showStudents();
 
         System.out.println();
@@ -60,9 +60,9 @@ public class TestStudent {
         System.out.println("search student: ");
         group1.searchStudent("Zlatan");
 
-        System.out.println();
-        group2.sortStudents();
-        group2.showStudents();
+        System.out.println("---------------------");
+        group1.sortStudentsByName();
+        group1.showStudents();
 
         System.out.println("--------------------------");
         group1.sortComparator(new ComparatorByMark());

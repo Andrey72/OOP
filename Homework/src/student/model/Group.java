@@ -53,10 +53,6 @@ public class Group {
 
     }
 
-    public String getNameGroup() {
-        return nameGroup;
-    }
-
     public void searchStudent(String name) {
         System.out.println("student name - " + name + "in group" + nameGroup);
         for (int i = 0; i < students.length; i++) {
@@ -67,12 +63,12 @@ public class Group {
     }
 
     // Sort with copareTo()
-   public Student[] sortStudents() {
+   public Student[] sortStudentsByName() {
 
         Student temp;
         for (int i = students.length - 1; i > 0; i--)
             for (int j = 0; j < i; j++)
-                if (students[j + 1] != null && students[j].getName().compareTo(students[j + 1].getName()) > 0) {
+                if (students[j + 1] != null && students[j+1].compareTo(students[j]) > 0) {
                     temp = students[j + 1];
                     students[j + 1] = students[j];
                     students[j] = temp;

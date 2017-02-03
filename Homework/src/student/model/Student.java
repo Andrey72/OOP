@@ -3,7 +3,7 @@ package student.model;
 /**
  * Created by Sherlock on 18.12.2016.
  */
-public class Student {
+public class Student implements Comparable {
 
     private String name;
     private String surname;
@@ -25,6 +25,10 @@ public class Student {
         this.surname = surname;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
     public String getName() {
         return name;
     }
@@ -43,6 +47,11 @@ public class Student {
         if (this.phone != temp.phone) return false;
         if (this.mark != temp.mark) return false;
         return true;
+    }
+    @Override
+    public int compareTo(Object object){
+        Student temp  = (Student) object;
+        return this.surname.compareTo(temp.surname);
     }
 
 
